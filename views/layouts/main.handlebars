@@ -20,7 +20,7 @@
       <a href="/"><h3>Home</h3></a>
       <a href="/dashboard"><h3>Dashboard</h3></a>
       <a href="/login"><h3>Login</h3></a>
-      <a href="/logout"><h3>Logout</h3></a>
+      <a href="/" , id="logout"><h3>Logout</h3></a>
 
       {{! links }}
     </nav>
@@ -32,5 +32,9 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
   </body>
 </html>

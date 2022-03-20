@@ -1,4 +1,4 @@
-const { Post, User } = require("../../models");
+const { Post, User } = require("../models");
 const router = require("express").Router();
 
 router.get("/", (req, res) => {
@@ -30,6 +30,4 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
-module.exports = {
-  router,
-};
+module.exports = router;

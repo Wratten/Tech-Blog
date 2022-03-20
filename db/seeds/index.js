@@ -3,12 +3,11 @@ const sequelize = require("../connect");
 const { faker } = require("@faker-js/faker");
 
 function createUser() {
-  const firstName = faker.name.firstName();
-  const lastName = faker.name.lastName();
+  const name = faker.name.firstName();
 
   return User.create({
-    name: firstName + " " + lastName,
-    email: faker.internet.email(firstName, lastName),
+    id: 24,
+    username: "username",
     password: "password",
   });
 }

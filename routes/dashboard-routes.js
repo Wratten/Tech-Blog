@@ -1,7 +1,7 @@
-const { Post, User } = require("../../models");
+const { Post, User } = require("../models");
 const router = require("express").Router();
 
-router.get("/dashboard", (req, res) => {
+router.get("/", (req, res) => {
   Post.findAll({
     include: [
       {
@@ -18,6 +18,4 @@ router.get("/dashboard", (req, res) => {
   });
 });
 
-module.exports = {
-  router,
-};
+module.exports = router;
