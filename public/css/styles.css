@@ -1,0 +1,36 @@
+nav {
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(32, 32, 32);
+  margin: 10px;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+#title {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  margin: 10px;
+}
+body {
+  background-color: #ffffffea;
+  color: #131313;
+}
+
+h1,
+p {
+  margin: 20px;
+  color: #131313;
+}

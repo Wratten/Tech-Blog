@@ -1,0 +1,17 @@
+<section>
+
+  {{! load all the posts }}
+
+  {{#each posts as |post|}}
+
+    <h1>{{post.title}} -- {{post.createdAt}}</h1>
+
+    <p>Written by: {{post.user.name}}</p>
+
+    <p>
+      {{post.body}}
+    </p>
+
+  {{/each}}
+
+</section>

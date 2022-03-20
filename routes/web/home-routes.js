@@ -1,21 +1,33 @@
-const { Blog, User } = require("../../models");
+const { Post, User } = require("../../models");
 const router = require("express").Router();
 
-router.get("/home", (req, res) => {
-  Blog.findAll({
+router.get("/", (req, res) => {
+  Post.findAll({
     include: [
       {
         model: User,
       },
     ],
-  }).then((blogs) => {
-    const blogsJson = blogs.map((blog) => blog.toJSON());
+  }).then((posts) => {
+    const postsJson = posts.map((post) => post.toJSON());
 
-    console.log(blogsJson);
-    res.render("blogs", {
-      blogs: blogsJson,
+    console.log(postsJson);
+    res.render("posts", {
+      posts: postsJson,
     });
   });
+});
+
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("login");
+});
+
+router.get("/signup", (req, res) => {
+  res.render("signup");
 });
 
 module.exports = {
