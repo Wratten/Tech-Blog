@@ -6,8 +6,8 @@ function createUser() {
   const name = faker.name.firstName();
 
   return User.create({
-    id: 24,
-    username: "username",
+    id: 28,
+    username: "daniel",
     password: "password",
   });
 }
