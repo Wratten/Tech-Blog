@@ -4,7 +4,7 @@
 
   {{#each posts as |post|}}
 
-    <h1>{{post.title}} -- {{post.createdAt}}</h1>
+    <h1>{{post.title}} -- {{format_date post.createdAt}}</h1>
 
     <p>Written by: {{post.user.username}}</p>
 
